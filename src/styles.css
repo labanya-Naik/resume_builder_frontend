@@ -1,0 +1,272 @@
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #e2e8f0;
+  background:
+    radial-gradient(circle at top left, rgba(34, 197, 94, 0.22), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.18), transparent 30%),
+    linear-gradient(135deg, #09111f 0%, #111827 45%, #1e293b 100%);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.8rem 1.1rem;
+  background: linear-gradient(135deg, #f97316, #fb7185);
+  color: white;
+  cursor: pointer;
+}
+
+button.ghost {
+  background: rgba(148, 163, 184, 0.14);
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(15, 23, 42, 0.7);
+  color: #f8fafc;
+  padding: 0.9rem 1rem;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  min-height: 100vh;
+}
+
+.hero {
+  padding: 2rem;
+  border-right: 1px solid rgba(148, 163, 184, 0.15);
+  background: rgba(8, 15, 29, 0.72);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 3rem;
+}
+
+.badge,
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: #fbbf24;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", serif;
+  margin: 0 0 0.7rem;
+}
+
+.lede {
+  color: #cbd5e1;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.admin-workspace {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.panel,
+.subpanel,
+.stat-card {
+  background: rgba(15, 23, 42, 0.76);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 28px;
+  padding: 1.2rem;
+  box-shadow: 0 18px 55px rgba(15, 23, 42, 0.25);
+}
+
+.stack,
+.form-column,
+.preview-column,
+.page-stack,
+.admin-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-header,
+.inline-row,
+.toggle-row,
+.log-row,
+.tab-row,
+.action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.full-span {
+  grid-column: 1 / -1;
+}
+
+.grid.two,
+.analytics-grid,
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.analytics-grid > div,
+.status-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.analytics-grid span,
+.status-grid span {
+  color: #94a3b8;
+  font-size: 0.92rem;
+}
+
+.analytics-grid strong,
+.status-grid strong {
+  font-size: 1.15rem;
+  color: #f8fafc;
+}
+
+.warning {
+  color: #fca5a5;
+}
+
+.suggestion {
+  color: #86efac;
+}
+
+.notice {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: rgba(249, 115, 22, 0.14);
+  color: #fed7aa;
+}
+
+.tab-row {
+  flex-wrap: wrap;
+}
+
+.tab-row button {
+  min-width: 110px;
+}
+
+.tab-row button.active {
+  background: linear-gradient(135deg, #22c55e, #14b8a6);
+}
+
+.resume-page {
+  background: white;
+  color: #0f172a;
+  min-height: 720px;
+  padding: 2rem;
+  border-radius: 28px;
+}
+
+.resume-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.profile-image {
+  width: 88px;
+  height: 88px;
+  border-radius: 24px;
+  object-fit: cover;
+  border: 3px solid #e2e8f0;
+  flex-shrink: 0;
+}
+
+.resume-page .headline,
+.resume-page .muted {
+  color: #64748b;
+}
+
+.download-link {
+  color: #fdba74;
+  text-decoration: none;
+}
+
+@media (max-width: 1100px) {
+  .app-shell,
+  .workspace,
+  .admin-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    position: static;
+    height: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .resume-header {
+    flex-direction: column;
+  }
+
+  .grid.two,
+  .analytics-grid,
+  .status-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+.profile-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.file-label {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.profile-picker-preview {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-image.small {
+  width: 64px;
+  height: 64px;
+}
